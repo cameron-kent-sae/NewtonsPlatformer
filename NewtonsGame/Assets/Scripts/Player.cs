@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     {
         SaveSystem.LoadPlayer();
         GetUI();
+        UpdateUI();
     }
     #endregion
 
@@ -48,21 +49,30 @@ public class Player : MonoBehaviour
         {
             case 1:
                 return "Summer";
-                break;
             case 2:
                 return "Autumn";
-                break;
             case 3:
                 return "Winter";
-                break;
             case 4:
                 return "Spring";
-                break;
             default:
                 return "Summer";
-                break;
         }
     }
+    
+    private void UpdateUI()
+    {
+        if (lives == 2)
+        {
+            heart3.SetActive(false);
+        }
+
+        if (lives == 1)
+        {
+            heart2.SetActive(false);
+        }
+    }
+
     private void GetUI()
     {
         heart1 = GameObject.Find("Heart 1");
