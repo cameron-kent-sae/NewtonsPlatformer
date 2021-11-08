@@ -34,12 +34,9 @@ public class Player : MonoBehaviour
             SaveSystem.SavePlayer(this);
             SceneManager.LoadScene(GetCurrentLevel());
         }
-        else
+        else if (lives == 0)
         {
-            lives = 3;
-            level = 1;
-            SaveSystem.SavePlayer(this);
-            SceneManager.LoadScene("Menu");
+            //Game over
         }
     }
 
