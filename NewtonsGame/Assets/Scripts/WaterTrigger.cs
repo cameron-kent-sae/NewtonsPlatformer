@@ -11,7 +11,7 @@ public class WaterTrigger : MonoBehaviour
 
     private void Start()
     {
-        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
