@@ -19,4 +19,18 @@ public class AudioController : MonoBehaviour
         musicSource.clip = musicClip;
         musicSource.Play();
     }
+    public void PlaySFX(AudioClip clip)
+    {
+        sfxSource.clip = clip;
+        sfxSource.Play();
+    }
+    public void PlaySFXOneShot(AudioClip clip)
+    {
+        sfxSource.PlayOneShot(clip);
+    }
+
+    public void StopSFX()
+    {
+        sfxSource.Stop();
+    }
 }
