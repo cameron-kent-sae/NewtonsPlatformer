@@ -4,7 +4,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -25,22 +24,8 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    public void LifeRestart()
-    {
-        lives -= 1;
 
-        if (lives > 0)
-        {
-            SaveSystem.SavePlayer(this);
-            SceneManager.LoadScene(GetCurrentLevel());
-        }
-        else if (lives == 0)
-        {
-            //Game over
-        }
-    }
-
-    private string GetCurrentLevel()
+    public string GetCurrentLevel()
     {
         switch (level)
         {
