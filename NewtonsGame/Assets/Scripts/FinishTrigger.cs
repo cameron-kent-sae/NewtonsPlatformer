@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterTrigger : MonoBehaviour
+public class FinishTrigger : MonoBehaviour
 {
     private GameController gameController;
 
@@ -18,7 +18,7 @@ public class WaterTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            gameController.LifeRestart();
+            gameController.FinishLevel();
         }
     }
 }
