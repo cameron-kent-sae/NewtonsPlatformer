@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5886107412572170560}
   - component: {fileID: 5886107412572170563}
-  - component: {fileID: 5886107412572170685}
-  - component: {fileID: 5886107412572170684}
-  - component: {fileID: 5886107412572170561}
-  - component: {fileID: 779664516307862060}
   - component: {fileID: 2117217447278149530}
+  - component: {fileID: 5886107412572170685}
+  - component: {fileID: 5886107412572170561}
+  - component: {fileID: 5886107412572170684}
+  - component: {fileID: 779664516307862060}
   m_Layer: 0
   m_Name: Newton
   m_TagString: Player
@@ -87,6 +87,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2117217447278149530
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886107412572170687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.65, y: 0.94}
+  m_Direction: 0
 --- !u!50 &5886107412572170685
 Rigidbody2D:
   serializedVersion: 4
@@ -102,27 +118,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &5886107412572170684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5886107412572170687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce813e8e4702f0a489251853f098c597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 5886107412572170561}
-  MovementSpeed: 8.5
-  JumpForce: 5
+  m_Constraints: 4
 --- !u!95 &5886107412572170561
 Animator:
   serializedVersion: 3
@@ -142,6 +143,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5886107412572170684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886107412572170687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce813e8e4702f0a489251853f098c597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5886107412572170561}
+  MovementSpeed: 8.5
+  JumpForce: 10
 --- !u!114 &779664516307862060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,19 +172,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   lives: 0
---- !u!70 &2117217447278149530
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5886107412572170687}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.65, y: 0.94}
-  m_Direction: 0
