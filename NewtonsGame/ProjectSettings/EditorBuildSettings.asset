@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/L4_Spring.unity
     guid: d96d18d4195f28641bb55ef0193374d0
+  - enabled: 1
+    path: Assets/Scenes/Daniela's Scenes/Game Over.unity
+    guid: d6d9f065f3aebbb47b05824c24b759e7
   m_configObjects: {}
