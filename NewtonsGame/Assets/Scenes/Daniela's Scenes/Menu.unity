@@ -2323,7 +2323,7 @@ PrefabInstance:
     - target: {fileID: 340876917443840995, guid: a4926365d63c11444b064a51ae48ffaf, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3ca18ca319ccee04281c195afa4f53b6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 340876918036220806, guid: a4926365d63c11444b064a51ae48ffaf, type: 3}
       propertyPath: Loop
       value: 1
@@ -2335,7 +2335,7 @@ PrefabInstance:
     - target: {fileID: 340876918036220806, guid: a4926365d63c11444b064a51ae48ffaf, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3ca18ca319ccee04281c195afa4f53b6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 340876918036220806, guid: a4926365d63c11444b064a51ae48ffaf, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
@@ -2388,5 +2388,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioController
       objectReference: {fileID: 0}
+    - target: {fileID: 340876918553078387, guid: a4926365d63c11444b064a51ae48ffaf, type: 3}
+      propertyPath: musicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ca18ca319ccee04281c195afa4f53b6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4926365d63c11444b064a51ae48ffaf, type: 3}
