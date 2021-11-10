@@ -20,7 +20,7 @@ public class MenuController : MonoBehaviour
     {
         player.lives = 3;
         player.level = 1;
-     //   player.SavePlayer();
+        player.SavePlayer();
         SceneManager.LoadScene("L1_Summer");
     }
     private void ContinueGame()
