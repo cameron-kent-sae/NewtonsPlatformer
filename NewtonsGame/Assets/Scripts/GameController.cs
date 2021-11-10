@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     {
         GetUI();
         UpdateUI();
-
+        player.LoadPlayer();
         FinishUI.SetActive(false);
     }
     #endregion
@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         Debug.Log(player.lives);
         player.lives--;
         Debug.Log(player.lives);
-        SaveSystem.SavePlayer(player);
+        player.SavePlayer(); ;
 
         if (player.lives > 0)
         {
@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
     {
         FinishUI.SetActive(true);
         player.level = levelIndex;
-        SaveSystem.SavePlayer(player);
+        player.SavePlayer(); ;
         nextBtn.onClick.AddListener(delegate { SceneManager.LoadScene(nextLevel); });
     }
 

@@ -7,20 +7,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    #region Variables
     public int level;
     public int lives;
 
-    #endregion
-
-    #region Built In Methods
-    private void Start()
+    public void SavePlayer()
     {
-        SaveSystem.LoadPlayer();
+        SaveSystem.SavePlayer(this);
     }
-    #endregion
 
-    #region Custom Methods
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
 
-    #endregion
+        level = data.level;
+        lives = data.lives;
+    }
 }
