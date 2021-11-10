@@ -14,6 +14,15 @@ public class MenuController : MonoBehaviour
     {
         playButton.onClick.AddListener(NewGame);
         continueButton.onClick.AddListener(ContinueGame);
+        player.LoadPlayer();
+        if (player.lives != 1 && player.lives != 2 && player.lives != 3)
+        {
+            continueButton.interactable = false;
+        }
+        else
+        {
+            continueButton.interactable = true;
+        }
     }
 
     private void NewGame()
