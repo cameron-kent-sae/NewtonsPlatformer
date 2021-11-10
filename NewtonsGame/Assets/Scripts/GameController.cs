@@ -15,11 +15,15 @@ public class GameController : MonoBehaviour
     public Player player;
     public GameObject FinishUI;
     public Button nextBtn;
+    private GameObject heart1, heart2, heart3;
     #endregion
 
     #region Built In Methods
     private void Start()
     {
+        GetUI();
+        UpdateUI();
+
         FinishUI.SetActive(false);
     }
     #endregion
@@ -27,11 +31,13 @@ public class GameController : MonoBehaviour
     #region Custom Methods
     public void RestartLevel()
     {
-        player.lives -= 1;
+        Debug.Log(player.lives);
+        player.lives--;
+        Debug.Log(player.lives);
+        SaveSystem.SavePlayer(player);
 
         if (player.lives > 0)
         {
-            SaveSystem.SavePlayer(player);
             SceneManager.LoadScene(thisLevel);
         }
         else if (player.lives == 0)
@@ -40,12 +46,33 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene(gameOverScene);
         }
     }
-    
+
     public void FinishLevel()
     {
         FinishUI.SetActive(true);
         player.level = levelIndex;
+        SaveSystem.SavePlayer(player);
         nextBtn.onClick.AddListener(delegate { SceneManager.LoadScene(nextLevel); });
+    }
+
+    private void UpdateUI()
+    {
+        if (player.lives == 2)
+        {
+            heart3.SetActive(false);
+        }
+
+        if (player.lives == 1)
+        {
+            heart2.SetActive(false);
+        }
+    }
+
+    private void GetUI()
+    {
+        heart1 = GameObject.Find("Heart 1");
+        heart2 = GameObject.Find("Heart 2");
+        heart3 = GameObject.Find("Heart 3");
     }
     #endregion
 }

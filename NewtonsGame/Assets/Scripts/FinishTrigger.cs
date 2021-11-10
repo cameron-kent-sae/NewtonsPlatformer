@@ -7,17 +7,13 @@ using UnityEngine;
 
 public class FinishTrigger : MonoBehaviour
 {
-    private GameController gameController;
-
-    private void Start()
-    {
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
-    }
+    public GameController gameController;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            Debug.Log("Finish triggered");
             gameController.FinishLevel();
         }
     }
