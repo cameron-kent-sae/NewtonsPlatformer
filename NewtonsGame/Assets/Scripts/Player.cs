@@ -24,24 +24,7 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Custom Methods
-
-    public string GetCurrentLevel()
-    {
-        switch (level)
-        {
-            case 1:
-                return "Summer";
-            case 2:
-                return "Autumn";
-            case 3:
-                return "Winter";
-            case 4:
-                return "Spring";
-            default:
-                return "Summer";
-        }
-    }
-    
+   
     private void UpdateUI()
     {
         if (lives == 2)

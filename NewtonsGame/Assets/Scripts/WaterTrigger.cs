@@ -18,7 +18,8 @@ public class WaterTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            gameController.LifeRestart();
+            Debug.Log("water triggered");
+            gameController.RestartLevel();
         }
     }
 }
